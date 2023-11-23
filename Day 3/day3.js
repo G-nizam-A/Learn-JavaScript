@@ -11,8 +11,6 @@ if(mark > 75){
 }
 
 
-
-
 let aa = 10;
 for(let i=0; i<6;i++){
     console.log(i);
