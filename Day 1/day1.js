@@ -16,6 +16,11 @@ sym = Symbol('#')
 // console.log(typeof age)
 // console.log(typeof phone)
 // console.log(typeof sym);
+console.log(gg);
+var gg;
+var gg;
+console.log(hh);
+let hh;
 
 // nizam = null
 // console.log(typeof nizam)
