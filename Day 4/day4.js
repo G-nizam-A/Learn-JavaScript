@@ -34,15 +34,15 @@ console.log(typeof +c);
 // //number to string
 aa = 100;
 console.log(typeof aa);
-console.log(typeof String(aa));
-console.log(typeof aa.toString())
+console.log(typeof String(aa));//explicit convertion
+console.log(typeof aa.toString()) //implicit
 
 
 // //string to number
 bb = '100';
 console.log(typeof bb);
-console.log(typeof Number(bb));
-console.log(typeof +bb);
+console.log(typeof Number(bb));//explicit convertion
+console.log(typeof +bb); //implicit
 
 
 bb1 = ""
