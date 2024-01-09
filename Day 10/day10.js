@@ -1,11 +1,11 @@
 // asynchronous function
 // console.log("before settimeout");
 
-// Promise();
-// fetch();
+// Promise();✔
+// fetch();✔
 // async await
-// setInterval()
-// setTimeOut()
+// setInterval()✔
+// setTimeOut()✔
 
 // let stop2 = setTimeout(function () {
 //   console.log("after 4 seconds");
@@ -49,42 +49,42 @@
 // returns promise   pending   reject
 
 // let a = document.querySelector("p");
-function getMeData1() {
-  fetch("https://dummyjson.com/products/1")
-    .then((pend) => console.log("function with pending state", pend.json()))
-    .catch((err) => console.log(err));
-}
+// function getMeData1() {
+//   fetch("https://dummyjson.com/products/1")
+//     .then((pend) => console.log("function with pending state", pend.json()))
+//     .catch((err) => console.log(err));
+// }
 
-function getMeData2() {
-  fetch("https://dummyjson.com/products")
-    .then((pend) => pend.json())
-    .then((data) => {
-      console.log("function with resolve state", data);
+// function getMeData2() {
+//   fetch("https://dummyjson.com/products")
+//     .then((pend) => pend.json())
+//     .then((data) => {
+//       console.log("function with resolve state", data);
 
-      //  products.map(product => {
-      //     console.log(product.title);
-      //     a.textContent += product.title;
-      //   });
-    })
-    .catch((err) => console.log(err));
-}
+//       //  products.map(product => {
+//       //     console.log(product.title);
+//       //     a.textContent += product.title;
+//       //   });
+//     })
+//     .catch((err) => console.log(err));
+// }
 
 // getMeData1();
 // getMeData2();
-async function getMeDataUsingAsync() {
-  let a = await fetch("https://dummyjson.com/products/1");
-  console.log(await a);
-}
-// getMeDataUsingAsync();
+// async function getMeDataUsingAsync() {
+//   let a = await fetch("https://dummyjson.com/products/1");
+//   console.log(await a);
+// }
+// // getMeDataUsingAsync();
 
-async function sum() {
-  try {
-    let a = await fetch("https://dummyjson.com/products/1");
-    console.log(await a);
-  } catch (err) {
-    console.log(err);
-  }
-}
+// async function sum() {
+//   try {
+//     let a = await fetch("https://dummyjson.com/products/1");
+//     console.log(await a);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 // sum();
 
 const promise11 = Promise.resolve(1);
@@ -101,37 +101,37 @@ allPromises
     console.error(error);
   });
 
-const promise1 = new Promise((resolve) => setTimeout(() => resolve(1), 500));
-const promise2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
-const promise3 = new Promise((resolve) => setTimeout(() => resolve(3), 500));
-const promise4 = new Promise((resolve, reject) => setTimeout(() => reject("Error"), 200) );
+// const promise1 = new Promise((resolve) => setTimeout(() => resolve(1), 500));
+// const promise2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
+// const promise3 = new Promise((resolve) => setTimeout(() => resolve(3), 500));
+// const promise4 = new Promise((resolve, reject) => setTimeout(() => reject("Error"), 200) );
 
-const racePromises = Promise.race([promise1, promise2, promise3, promise4]);
-// Promise.race is similar to Promise.all, but it fulfills or rejects as soon as one of the input promises fulfills or rejects. It can be useful in scenarios where you want to race multiple asynchronous operations.
-racePromises
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+// const racePromises = Promise.race([promise1, promise2, promise3, promise4]);
+// // Promise.race is similar to Promise.all, but it fulfills or rejects as soon as one of the input promises fulfills or rejects. It can be useful in scenarios where you want to race multiple asynchronous operations.
+// racePromises
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
 
-  const allSettledPromises = Promise.allSettled([promise11, promise22, promise33]);
-// Promise.allSettled is similar to Promise.all, but it waits for all the promises to settle (either fulfill or reject) and returns an array of objects representing the outcome of each promise.
+//   const allSettledPromises = Promise.allSettled([promise11, promise22, promise33]);
+// // Promise.allSettled is similar to Promise.all, but it waits for all the promises to settle (either fulfill or reject) and returns an array of objects representing the outcome of each promise.
 
-  allSettledPromises
-    .then((results) => {
-      console.log(results);
-      // Output: [
-      //   { status: 'fulfilled', value: 1 },
-      //   { status: 'fulfilled', value: 2 },
-      //   { status: 'rejected', reason: 3 }
-      // ]
-    })
-    .catch((error) => {
-      console.error(error); // This will not be executed
-    });
-    
+//   allSettledPromises
+//     .then((results) => {
+//   console.log(results);
+//   // Output: [
+//   //   { status: 'fulfilled', value: 1 },
+//   //   { status: 'fulfilled', value: 2 },
+//   //   { status: 'rejected', reason: 3 }
+//   // ]
+// })
+// .catch((error) => {
+//   console.error(error); // This will not be executed
+// });
+
 // const loadData = new Promise((resolve, reject) => {
 //   const shouldSucceed = true;
 
@@ -187,3 +187,29 @@ racePromises
 // fetchData();
 // fetchDataAsync();
 // fetchDataAxios();
+
+// ferch data  (pending)  (resolve) (rejcet)
+fetch("https://dummyjson.com/products/1")
+  .then((pend) => pend.json())
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+
+// fetch("https://dummyjson.com/products/2")
+//   .then(function (pend) { return pend.json(); })
+//   .then(function (resolve) { console.log(resolve);  })
+//   .catch(function (err) { console.log(err); });
+function getData1() {
+  console.log("jjj");
+}
+console.log(getData1());
+
+async function getData(){
+  let resolved = await fetch("https://dummyjson.com/products/1");
+  console.log('first', await resolved.json())
+}
+getData();
+
+function getData2() {
+  console.log("rrrr");
+}
+console.log(getData2());
