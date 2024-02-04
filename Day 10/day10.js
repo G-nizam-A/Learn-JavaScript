@@ -1,11 +1,10 @@
-// asynchronous function
-// console.log("before settimeout");
+// asynchronous function - these function r exceuted after completing synchronous code
 
+// setInterval()✔
+// setTimeOut()✔
 // Promise();✔
 // fetch();✔
 // async await
-// setInterval()✔
-// setTimeOut()✔
 
 // let stop2 = setTimeout(function () {
 //   console.log("after 4 seconds");
@@ -43,9 +42,55 @@
 //     console.log("catch state: ", err);
 //   });
 
+// async function getData1(){
+// }
+// console.log('asynchrnous fnt', getData1());
+
+//  function getData2(){
+// }
+// console.log('synchrnous fnt',getData2());
+
+
+
+// fetch('https://dummyjson.com/products')
+// .then((data)=> data.json())
+// .then((data)=>{
+//   let dd = data.products;
+//   for(let i in dd){
+//     console.log(dd[i].title);
+//     document.body.innerHTML +=`${dd[i].title}<br>`;
+//     document.body.innerHTML +=`Rs.${dd[i].price}<br>`;
+//     document.body.innerHTML +=`${dd[i].brand}<br>`;
+//     document.body.innerHTML +=`<img src="${dd[i].thumbnail}" alt="${dd[i].title}"><br><hr>`;
+//   }
+// })
+// .catch((err)=>console.log(err));
+
+
+// async function getProducts() {
+//   let result = await fetch("https://dummyjson.com/products");
+//   let data = await result.json();
+//   let dd = data.products;
+//   for (let i in dd) {
+//     console.log(dd[i].title);
+//     document.body.innerHTML += `${dd[i].title}<br>`;
+//     document.body.innerHTML += `Rs.${dd[i].price}<br>`;
+//     document.body.innerHTML += `${dd[i].brand}<br>`;
+//     document.body.innerHTML += `<img src="${dd[i].thumbnail}" alt="${dd[i].title}"><br><hr>`;
+//   }
+// }
+// getProducts();
+
+
+// fetch('https://dummyjson.com/products')
+// .then((data)=> data.json())
+// .then((data)=>console.log('normal fetch fn',data))
+// .catch((err)=>console.log(err));
+
 // returns promise   pending   success    reject
-// fetch(fn).then(fn).then(fn).catch(fn);
-// fetch(fn).then(fn).catch(fn);
+// fetch('url').then(fn).then(fn).catch(fn);
+
+// fetch('url').then(fn).catch(fn)
 // returns promise   pending   reject
 
 // let a = document.querySelector("p");
@@ -87,19 +132,19 @@
 // }
 // sum();
 
-const promise11 = Promise.resolve(1);
-const promise22 = Promise.resolve(2);
-const promise33 = Promise.reject(3);
+// const promise11 = Promise.resolve(1);
+// const promise22 = Promise.resolve(2);
+// const promise33 = Promise.reject(3);
 
-const allPromises = Promise.all([promise11, promise22, promise33]);
-// Promise.all is a async function that takes an array of promises and returns a new promise that fulfills with an array of fulfilled results when all the input promises have been fulfilled. If any of the input promises is rejected, the entire promise is rejected.
-allPromises
-  .then((results) => {
-    console.log(results);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+// const allPromises = Promise.all([promise11, promise22, promise33]);
+// // Promise.all is a async function that takes an array of promises and returns a new promise that fulfills with an array of fulfilled results when all the input promises have been fulfilled. If any of the input promises is rejected, the entire promise is rejected.
+// allPromises
+//   .then((results) => {
+//     console.log(results);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
 
 // const promise1 = new Promise((resolve) => setTimeout(() => resolve(1), 500));
 // const promise2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
@@ -189,27 +234,27 @@ allPromises
 // fetchDataAxios();
 
 // ferch data  (pending)  (resolve) (rejcet)
-fetch("https://dummyjson.com/products/1")
-  .then((pend) => pend.json())
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+// fetch("https://dummyjson.com/products/1")
+//   .then((pend) => pend.json())
+//   .then((res) => console.log(res))
+// .catch((err) => console.log(err));
 
 // fetch("https://dummyjson.com/products/2")
 //   .then(function (pend) { return pend.json(); })
 //   .then(function (resolve) { console.log(resolve);  })
 //   .catch(function (err) { console.log(err); });
-function getData1() {
-  console.log("jjj");
-}
-console.log(getData1());
+// function getData1() {
+//   console.log("jjj");
+// }
+// console.log(getData1());
 
-async function getData(){
-  let resolved = await fetch("https://dummyjson.com/products/1");
-  console.log('first', await resolved.json())
-}
-getData();
+// async function getData(){
+//   let resolved = await fetch("https://dummyjson.com/products/1");
+//   console.log('first', await resolved.json())
+// }
+// getData();
 
-function getData2() {
-  console.log("rrrr");
-}
-console.log(getData2());
+// function getData2() {
+//   console.log("rrrr");
+// }
+// console.log(getData2());
